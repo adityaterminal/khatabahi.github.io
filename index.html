@@ -135,7 +135,7 @@
       </button>
 
       <div class="flex items-center pl-1 border-l border-amber-700/60">
-        <button id="auth-action-btn" class="w-7 h-7 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center shadow transition" title="Sign in with Google">
+        <button id="auth-action-btn" class="w-7 h-7 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center shadow transition cursor-pointer" title="Sign in with Google">
           U
         </button>
       </div>
@@ -185,7 +185,7 @@
           <i data-lucide="wallet" class="w-3.5 h-3.5 text-amber-600"></i>
         </div>
         <h3 id="card-total-balance" class="text-slate-900 text-lg font-black heading-font">₹0.00</h3>
-        <p class="text-[10px] text-slate-500 truncate" id="current-company-display">Name</p>
+        <p class="text-[10px] text-slate-500 truncate" id="current-company-display">Primary Store</p>
       </div>
     </aside>
 
@@ -519,7 +519,7 @@
               <p class="text-[11px] text-slate-500" id="user-display-email">Not signed in (Local Storage Only)</p>
             </div>
           </div>
-          <button id="auth-action-btn-settings" class="bg-[#78350f] hover:bg-[#92400e] text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition shadow-sm">
+          <button id="auth-action-btn-settings" class="bg-[#78350f] hover:bg-[#92400e] text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition shadow-sm cursor-pointer">
             Sign In with Google
           </button>
         </div>
@@ -819,7 +819,7 @@
     </div>
   </div>
 
-  <!-- ================= COMMERCIAL INVOICE TEMPLATE (OFFSCREEN - NO DEMO PLACEHOLDERS) ================= -->
+  <!-- ================= COMMERCIAL INVOICE TEMPLATE (OFFSCREEN) ================= -->
   <div id="invoice-pdf-template" style="display: none; width: 700px; max-width: 700px; box-sizing: border-box; background: #ffffff; color: #000; font-family: Arial, sans-serif; font-size: 11px; padding: 12px; margin: 0 auto;">
     <div style="border: 2px solid #000000; box-sizing: border-box; width: 100%;">
       <!-- 1. TOP DOCUMENT HEADER -->
@@ -938,7 +938,7 @@
     ];
     window.activeCompanyId = localStorage.getItem('ledger_active_company_id') || window.companies[0].id;
     window.transactions = JSON.parse(localStorage.getItem(`ledger_tx_${window.activeCompanyId}`)) || [];
-    window.currentUser = JSON.parse(localStorage.getItem('ledger_user')) || { name: 'Guest', email: '', currency: '₹' };
+    window.currentUser = JSON.parse(localStorage.getItem('ledger_user')) || { name: 'Guest User', email: '', currency: '₹' };
 
     let isProUser = JSON.parse(localStorage.getItem('ledger_is_pro')) || false;
     let proExpiry = JSON.parse(localStorage.getItem('ledger_pro_expiry')) || null;
@@ -1004,7 +1004,6 @@
     function submitUpiVerification() {
       const utr = document.getElementById('upi-utr-input').value.trim();
       if (utr.length >= 8) {
-        // Activate 30-day Pro license locally
         const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
         isProUser = true;
         proExpiry = Date.now() + thirtyDaysMs;
@@ -1014,7 +1013,7 @@
 
         updateProStatusUI();
         closeUpgradeModal();
-        alert(`Request recorded with Ref: ${utr}. Khata Pro features are enabled for 30 days.`);
+        alert(`Request recorded with Ref: ${utr}. Khata Pro features enabled.`);
         if (window.syncLedgerToCloud) window.syncLedgerToCloud();
       } else {
         alert("Please enter a valid 12-digit UPI Reference / UTR Number.");
@@ -1636,7 +1635,6 @@
     function updateCharts() {
       if (!doughnutChart || !lineChart) return;
 
-      // Update Doughnut Chart (Categories)
       const map = {};
       (window.transactions || []).forEach(t => {
         const cat = t.category || 'General';
@@ -1646,7 +1644,6 @@
       doughnutChart.data.datasets[0].data = Object.values(map);
       doughnutChart.update();
 
-      // Update Overview Line Chart (Balance Over Time)
       const sorted = [...(window.transactions || [])].sort((a, b) => new Date(a.date) - new Date(b.date));
       lineChart.data.labels = sorted.map(t => t.date);
       let running = 0;
@@ -1854,7 +1851,7 @@
 
       if (settingsBtn) {
         settingsBtn.innerText = "Logout";
-        settingsBtn.className = "bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg shadow-sm";
+        settingsBtn.className = "bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg shadow-sm cursor-pointer";
         settingsBtn.onclick = async (e) => {
           e.preventDefault();
           await signOut(auth);
@@ -1898,11 +1895,23 @@
     };
 
     window.handleGoogleSignIn = async function(e) {
-      if (e) e.preventDefault();
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       try {
         const res = await signInWithPopup(auth, provider);
-        if (res && res.user) applyUserData(res.user);
+        if (res && res.user) {
+          applyUserData(res.user);
+        }
       } catch (err) {
+        console.warn("Popup blocked or failed, attempting redirect:", err.code, err.message);
+
+        if (err.code === 'auth/unauthorized-domain') {
+          alert("Firebase Domain Error: Make sure 'adityaterminal.github.io' is added in Firebase Console -> Authentication -> Settings -> Authorized Domains.");
+          return;
+        }
+
         try {
           await signInWithRedirect(auth, provider);
         } catch (redirectErr) {
@@ -1915,14 +1924,20 @@
       const headerBtn = document.getElementById('auth-action-btn');
       const settingsBtn = document.getElementById('auth-action-btn-settings');
       if (headerBtn) headerBtn.onclick = window.handleGoogleSignIn;
-      if (settingsBtn && settingsBtn.innerText !== "Logout") {
+      if (settingsBtn && !auth.currentUser) {
         settingsBtn.onclick = window.handleGoogleSignIn;
       }
     }
 
     getRedirectResult(auth)
-      .then((res) => { if (res && res.user) applyUserData(res.user); })
-      .catch(console.error);
+      .then((res) => {
+        if (res && res.user) {
+          applyUserData(res.user);
+        }
+      })
+      .catch((err) => {
+        console.error("Redirect auth error:", err);
+      });
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
