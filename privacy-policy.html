@@ -2,28 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Privacy Policy - Khata Bahi</title>
   <meta name="description" content="Privacy Policy for Khata Bahi detailing data handling, local storage, cloud synchronization, and user security.">
-
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8403484408535539" crossorigin="anonymous"></script>
-
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fffdf7;
-      color: #1e293b;
-    }
+    body { font-family: 'Inter', sans-serif; background-color: #fffdf7; color: #1e293b; }
     .heading-font { font-family: 'Plus Jakarta Sans', sans-serif; }
     .caphi-card {
       background: #ffffff;
@@ -34,7 +27,6 @@
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
-
   <!-- HEADER -->
   <header class="bg-[#78350f] text-white border-b border-amber-900/50 px-4 md:px-8 py-3 flex justify-between items-center sticky top-0 z-30 shadow-md">
     <div class="flex items-center gap-3">
@@ -59,174 +51,30 @@
       <div class="border-b border-amber-100 pb-4">
         <span class="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider border border-amber-200">Data Protection</span>
         <h1 class="text-2xl md:text-3xl font-black text-slate-900 heading-font mt-2">Privacy Policy</h1>
-        <p class="text-xs text-slate-500 mt-1 font-medium">Last Updated: September 2026</p>
+        <p class="text-xs text-slate-500 mt-1 font-medium">Last Updated: November 2026</p>
       </div>
-
       <div class="prose prose-slate max-w-none text-xs md:text-sm text-slate-700 leading-relaxed space-y-5">
-        <p>At Khata Bahi, privacy is an important consideration because the platform can be used to maintain business and transaction records.</p>
-        <p>This Privacy Policy explains what types of information may be processed, how information may be stored, what third-party services may be involved and what responsibilities users have when using the service.</p>
-        <p>By using Khata Bahi, you acknowledge that information may be processed as described in this Privacy Policy.</p>
+        <p>At Khata Bahi, user privacy is paramount. This platform allows retail businesses, traders, and freelancers to record accounting ledgers, tax invoices, and micro-savings records.</p>
 
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">1. Scope</h2>
-        <p>This Privacy Policy applies to Khata Bahi and its website-based services accessible through the Khata Bahi web platform.</p>
-        <p>It covers information associated with use of the platform, including information that users voluntarily enter into business records.</p>
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">1. Local & Cloud Storage Architecture</h2>
+        <p>By default, all transaction entries, store parameters, and Gullak savings entries are stored locally on your device via browser `localStorage`. When you authenticate using Google Sign-In, records synchronize with Google Firebase/Firestore isolated strictly to your authenticated account UID.</p>
 
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">2. Information Users May Enter</h2>
-        <p>Depending on the features used, users may enter information including:</p>
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">2. Client-Side Document Processing</h2>
+        <p>Khata Bahi features document utilities (PDF-to-Excel, Excel-to-PDF, and photo compression). These utilities process documents purely within your browser's local sandbox memory; no customer files are transmitted or stored on remote servers.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">3. Third-Party Services & Cookies</h2>
+        <p>We may use third-party tools to maintain infrastructure and security:</p>
         <ul class="list-disc list-inside space-y-1 pl-2">
-          <li>Business name</li>
-          <li>Company name</li>
-          <li>GSTIN</li>
-          <li>Phone number</li>
-          <li>Business address</li>
-          <li>Customer names</li>
-          <li>Vendor names</li>
-          <li>Transaction descriptions</li>
-          <li>Dates</li>
-          <li>Amounts</li>
-          <li>Quantities</li>
-          <li>GST information</li>
-          <li>Payment modes</li>
-          <li>Categories</li>
-          <li>Invoice information</li>
-          <li>Credit information</li>
-          <li>Other bookkeeping information</li>
-        </ul>
-        <p>Users are responsible for ensuring that they have appropriate authority to enter and process information belonging to other individuals or organizations.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">3. Account Information</h2>
-        <p>Some functionality may require users to authenticate through a supported account.</p>
-        <p>The current website provides a Google Login option.</p>
-        <p>When authentication is used, account-related information may be processed by the authentication provider.</p>
-        <p>Users should review the provider's applicable privacy documentation.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">4. Local Storage</h2>
-        <p>The existing Khata Bahi privacy information states that transaction ledgers, customer credit entries and Gullak savings entries may be stored locally on the user's device using browser localStorage.</p>
-        <p>Information stored locally may remain on the device until the user or browser removes it, subject to browser behavior.</p>
-        <p>Clearing browser storage can potentially remove locally stored information.</p>
-        <p>Users should therefore maintain appropriate backups of important records.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">5. Cloud Storage</h2>
-        <p>Where account synchronization is enabled, information may be synchronized with Google Firebase/Firestore under the authenticated account.</p>
-        <p>The purpose of synchronization is to provide supported account-based access and data persistence.</p>
-        <p>The availability and operation of cloud synchronization may depend on third-party infrastructure.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">6. Financial Records</h2>
-        <p>Khata Bahi may process business-related records that users choose to enter.</p>
-        <p>These records may include transaction amounts, customer information, credit information, GST details and invoice information.</p>
-        <p>Users should consider the sensitivity of information before entering it.</p>
-        <p>The published privacy policy states that Khata Bahi does not sell or distribute users' financial ledgers.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">7. Advertising</h2>
-        <p>The platform may use third-party advertising services, including Google AdSense.</p>
-        <p>The existing privacy notice states that third-party vendors, including Google, may use cookies to serve advertisements based on prior visits to the website or other websites.</p>
-        <p>Advertising technologies may collect or process information according to the relevant third-party provider's policies.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">8. Cookies</h2>
-        <p>Cookies and similar technologies may be used for purposes such as:</p>
-        <ul class="list-disc list-inside space-y-1 pl-2">
-          <li>Supporting website functionality</li>
-          <li>Remembering certain settings</li>
-          <li>Authentication-related functionality</li>
-          <li>Advertising</li>
-          <li>Measuring or understanding website usage</li>
-        </ul>
-        <p>Users may be able to control cookies through browser settings, although disabling certain cookies may affect functionality.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">9. Third-Party Services</h2>
-        <p>Khata Bahi may rely on third-party providers for infrastructure or functionality.</p>
-        <p>Potential third-party services include:</p>
-        <ul class="list-disc list-inside space-y-1 pl-2">
-          <li>Google authentication</li>
-          <li>Google Firebase</li>
-          <li>Google Firestore</li>
-          <li>Google AdSense</li>
-          <li>Hosting infrastructure</li>
-          <li>Payment services</li>
-          <li>Other technical providers</li>
-        </ul>
-        <p>Each provider may process information under its own policies and terms.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">10. Why Information Is Processed</h2>
-        <p>Information may be processed to:</p>
-        <ul class="list-disc list-inside space-y-1 pl-2">
-          <li>Provide bookkeeping functionality</li>
-          <li>Save transactions</li>
-          <li>Synchronize account data</li>
-          <li>Generate invoices</li>
-          <li>Calculate amounts</li>
-          <li>Provide document-conversion functionality</li>
-          <li>Process payments</li>
-          <li>Verify Pro subscriptions</li>
-          <li>Respond to support requests</li>
-          <li>Maintain platform security</li>
-          <li>Improve functionality</li>
-          <li>Display advertisements</li>
-          <li>Comply with applicable legal requirements</li>
+          <li><strong>Google Firebase:</strong> Identity authentication and encrypted Firestore synchronization.</li>
+          <li><strong>Google AdSense:</strong> Serves contextual advertising to support the free tier.</li>
         </ul>
 
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">11. User Responsibility</h2>
-        <p>Users should not enter personal or confidential information unless they have an appropriate reason and authority to do so.</p>
-        <p>For example, if a user enters a customer's name and phone number, the user should ensure that collecting and using that information is appropriate for the user's business and legal obligations.</p>
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">4. Data Deletion</h2>
+        <p>Users can delete local storage at any time by clearing browser history and application data. To request cloud deletion of synchronized records, contact us directly.</p>
 
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">12. Data Security</h2>
-        <p>Reasonable technical measures may be used to protect information handled by the service.</p>
-        <p>However, no internet-connected service can guarantee absolute security.</p>
-        <p>Users should use strong account-security practices and keep their devices protected.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">13. Account Security</h2>
-        <p>Users are responsible for protecting access to their accounts.</p>
-        <p>If a user's Google account is compromised, unauthorized persons may potentially obtain access to services connected to that account.</p>
-        <p>Users should use appropriate security features offered by their authentication provider.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">14. Data Retention</h2>
-        <p>Information may remain stored for as long as necessary to provide the relevant service, maintain records, comply with legal requirements or support legitimate operational purposes.</p>
-        <p>Local data may remain until deleted by the user or browser.</p>
-        <p>Cloud-synchronized information may be retained according to the platform's operational and technical requirements.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">15. Data Deletion</h2>
-        <p>Users who want information removed should contact Khata Bahi where the relevant information is maintained by the service.</p>
-        <p>For locally stored information, users may also need to remove the information from their browser/device.</p>
-        <p>Where information is maintained through a third-party service, deletion may also be subject to that provider's systems and policies.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">16. Children's Privacy</h2>
-        <p>Khata Bahi is designed as a business bookkeeping utility rather than a service directed toward children.</p>
-        <p>Users should not use the service to knowingly collect children's personal information in violation of applicable law.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">17. Payment Information</h2>
-        <p>Where users purchase Pro functionality, payment processing may involve a third-party payment mechanism.</p>
-        <p>Khata Bahi may receive transaction-related information needed to identify or verify a payment.</p>
-        <p>Users should avoid sharing unnecessary sensitive financial information through email or support channels.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">18. Advertising and Personalized Ads</h2>
-        <p>Third-party advertising providers may use cookies or similar technologies.</p>
-        <p>Advertising providers may use information about browsing activity according to their own policies.</p>
-        <p>Users can review advertising and privacy controls provided by the relevant advertising provider and browser.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">19. External Websites</h2>
-        <p>Khata Bahi may contain links to external websites.</p>
-        <p>This Privacy Policy does not automatically apply to those websites.</p>
-        <p>Users should review the privacy policies of external websites before providing information.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">20. Changes to the Privacy Policy</h2>
-        <p>This Privacy Policy may be updated from time to time.</p>
-        <p>Changes may be made because of:</p>
-        <ul class="list-disc list-inside space-y-1 pl-2">
-          <li>New features</li>
-          <li>Technical changes</li>
-          <li>Changes in third-party services</li>
-          <li>Changes in applicable law</li>
-          <li>Changes in data practices</li>
-        </ul>
-        <p>The updated policy will be published on the website.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">21. Accuracy</h2>
-        <p>Users are responsible for ensuring that information they provide is accurate and current where accuracy is required.</p>
-
-        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">22. Contact</h2>
-        <p>Questions, concerns or requests regarding privacy may be sent to:</p>
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">5. Contact Information</h2>
+        <p>For inquiries regarding data protection and terms:</p>
         <p class="font-bold">Email: aditya.care97@gmail.com</p>
-        <p>When contacting support regarding personal information, users should provide enough information to help identify the issue but should avoid sending unnecessary sensitive information.</p>
       </div>
     </div>
   </main>
@@ -244,7 +92,6 @@
       <a href="terms.html" class="hover:underline">Terms & Conditions</a>
     </div>
   </footer>
-
   <script>lucide.createIcons();</script>
 </body>
 </html>
