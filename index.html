@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>Khata Bahi - Cloud GST Accounting, Multi-Store Ledger & Business Encyclopedia</title>
-  <meta name="description" content="All-in-one digital accounting ledger, daily micro-savings Gullak with deletion controls, comprehensive document conversion tools, and exhaustive retail bookkeeping knowledgebase.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khata Bahi - Cloud GST Accounting, Multi-Store Ledger & Business Utilities</title>
+  <meta name="description" content="All-in-one digital accounting ledger, daily micro-savings Gullak, document conversion tools, and retail bookkeeping system.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  
+
   <!-- Utility Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -39,7 +39,6 @@
       color: #1e293b;
     }
     .heading-font { font-family: 'Plus Jakarta Sans', sans-serif; }
-
     .caphi-card {
       background: #ffffff;
       border: 1px solid #fef08a;
@@ -82,7 +81,7 @@
   <!-- TOP BRAND & CONTROLLER HEADER -->
   <header class="bg-[#78350f] text-white border-b border-amber-900/50 px-3 md:px-8 py-2.5 flex justify-between items-center shrink-0 z-30 shadow-md sticky top-0">
     <div class="flex items-center gap-2 md:gap-5">
-      <div class="flex items-center gap-2.5">
+      <a href="index.html" class="flex items-center gap-2.5">
         <div class="bg-gradient-to-tr from-amber-400 to-yellow-300 p-2 rounded-xl text-slate-950 shadow-sm">
           <i data-lucide="receipt" class="w-5 h-5"></i>
         </div>
@@ -90,7 +89,7 @@
           <h1 class="text-white font-black text-base md:text-lg heading-font tracking-tight leading-none">Khata Bahi</h1>
           <p class="text-[10px] text-amber-200 font-bold uppercase tracking-wider mt-0.5">Cloud GST Ledger</p>
         </div>
-      </div>
+      </a>
 
       <!-- STORE SELECTOR PILL -->
       <button onclick="openStoreSwitchModal()" class="hidden sm:flex items-center gap-2 bg-amber-950/70 hover:bg-amber-900/90 py-1.5 px-3 rounded-xl border border-amber-500/40 shadow-inner transition group text-left">
@@ -99,7 +98,7 @@
         </div>
         <div class="leading-none pr-1">
           <span class="text-[9px] text-amber-300 font-bold uppercase tracking-widest block">Branch Outlet</span>
-          <span id="header-active-store-name" class="text-xs font-black text-white truncate max-w-[140px] block mt-0.5">Santosh Jain</span>
+          <span id="header-active-store-name" class="text-xs font-black text-white truncate max-w-[140px] block mt-0.5">Primary Branch</span>
         </div>
         <i data-lucide="chevrons-up-down" class="w-3.5 h-3.5 text-amber-300 opacity-70 group-hover:opacity-100"></i>
       </button>
@@ -148,7 +147,7 @@
     <button onclick="openStoreSwitchModal()" class="flex items-center gap-2 bg-amber-950/60 px-2.5 py-1 rounded-lg border border-amber-500/30 text-left">
       <i data-lucide="store" class="w-3.5 h-3.5 text-amber-300"></i>
       <span class="text-[10px] text-amber-200 font-bold uppercase">Store:</span>
-      <span id="mobile-active-store-name" class="font-bold text-white max-w-[130px] truncate">Name</span>
+      <span id="mobile-active-store-name" class="font-bold text-white max-w-[130px] truncate">Primary Branch</span>
       <i data-lucide="chevrons-up-down" class="w-3 h-3 text-amber-300 ml-1"></i>
     </button>
     <button onclick="openAddCompanyModal()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-lg flex items-center gap-1 shadow">
@@ -195,7 +194,7 @@
 
       <!-- ================= 1. VIEW: LEDGER DASHBOARD ================= -->
       <div id="view-dashboard" class="tab-view space-y-6">
-        
+
         <section class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           <div class="caphi-card p-4 flex flex-col justify-between">
             <div class="flex justify-between items-start">
@@ -296,7 +295,7 @@
                 <p class="text-[11px] text-slate-500">Personal Daily Micro-Savings Tracker</p>
               </div>
             </div>
-            <span class="text-[10px] bg-amber-100 text-amber-900 font-bold px-2.5 py-1 rounded-full border border-amber-200">Offline Secure</span>
+            <span class="text-[10px] bg-amber-100 text-amber-900 font-bold px-2.5 py-1 rounded-full border border-amber-200">Cloud & Offline Synced</span>
           </div>
 
           <div class="bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-slate-950 p-6 rounded-2xl shadow-sm text-center space-y-1 relative overflow-hidden">
@@ -377,7 +376,7 @@
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="file-spreadsheet" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">PDF to Excel (.XLSX)</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Extract invoice tables into editable spreadsheets.</p>
+                <p class="text-[11px] text-slate-500">Extract invoice tables and lines into editable spreadsheets.</p>
                 <input type="file" id="pdf-to-excel-input" accept=".pdf" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="convertPdfToExcel()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
@@ -517,11 +516,11 @@
             </div>
             <div>
               <h4 class="font-bold text-sm text-slate-900" id="user-display-name">Guest User</h4>
-              <p class="text-[11px] text-slate-500" id="user-display-email">Not signed in</p>
+              <p class="text-[11px] text-slate-500" id="user-display-email">Not signed in (Local Storage Only)</p>
             </div>
           </div>
           <button id="auth-action-btn-settings" class="bg-[#78350f] hover:bg-[#92400e] text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition shadow-sm">
-            Sign In
+            Sign In with Google
           </button>
         </div>
 
@@ -529,7 +528,7 @@
           <div class="flex justify-between items-center border-b border-slate-100 pb-3">
             <div>
               <h4 class="text-base font-bold text-slate-900 heading-font">Active Store Profiles</h4>
-              <p class="text-xs text-slate-500">Tap a store to open its active accounting books</p>
+              <p class="text-xs text-slate-500">Tap a store to switch to its active accounting books</p>
             </div>
             <button onclick="openAddCompanyModal()" class="bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 border border-amber-300">
               <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add Store
@@ -538,7 +537,7 @@
           <div id="company-list-container" class="space-y-2 max-h-56 overflow-y-auto pr-1"></div>
         </div>
 
-        <!-- Business Meta Form with Company PAN -->
+        <!-- Business Meta Form -->
         <div class="caphi-card p-6 max-w-2xl space-y-4">
           <h4 class="text-base font-bold text-slate-900 heading-font">Store Invoice Information</h4>
           <form id="company-profile-form" onsubmit="saveCompanyDetails(event)" class="space-y-3.5 text-xs">
@@ -562,7 +561,7 @@
             </div>
             <div>
               <label class="block font-bold text-slate-700 mb-1">Business Address</label>
-              <textarea id="set-company-address" rows="2" class="w-full p-2.5 rounded-lg caphi-input" placeholder="U-68A, SHAKARPUR, DELHI-110092"></textarea>
+              <textarea id="set-company-address" rows="2" class="w-full p-2.5 rounded-lg caphi-input" placeholder="Shop Address, City, State - PIN"></textarea>
             </div>
             <button type="submit" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">Save Store Details</button>
           </form>
@@ -621,9 +620,7 @@
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
       </div>
-
       <div id="modal-stores-list" class="space-y-2 max-h-60 overflow-y-auto pr-1"></div>
-
       <div class="pt-2 border-t border-slate-100 flex gap-2">
         <button onclick="closeStoreSwitchModal(); openAddCompanyModal();" class="flex-1 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
           <i data-lucide="plus-circle" class="w-4 h-4"></i> Register New Store
@@ -642,7 +639,7 @@
       <div class="space-y-3 text-xs">
         <div>
           <label class="block font-bold text-slate-700 mb-1">Store / Business Name</label>
-          <input type="text" id="new-company-name-input" placeholder="e.g. Santosh Jain" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
+          <input type="text" id="new-company-name-input" placeholder="e.g. Laxmi Traders" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
         </div>
         <button onclick="createNewCompany()" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">
           Save & Switch Store
@@ -655,7 +652,7 @@
   <div id="modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-lg w-full p-5 md:p-6 shadow-xl max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-100">
-        <h3 class="text-base font-bold text-slate-900 heading-font">Add Entry 🌸</h3>
+        <h3 class="text-base font-bold text-slate-900 heading-font">Record Ledger Entry</h3>
         <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-4 h-4"></i></button>
       </div>
 
@@ -682,13 +679,13 @@
             <div>
               <label class="block font-semibold text-amber-900 mb-1">Invoice Document Type</label>
               <select id="invoice-doc-type" class="w-full rounded-lg p-2 caphi-input font-bold bg-white">
-                <option value="SERVICE INVOICE">SERVICE INVOICE</option>
                 <option value="TAX INVOICE">TAX INVOICE</option>
+                <option value="SERVICE INVOICE">SERVICE INVOICE</option>
               </select>
             </div>
             <div>
               <label class="block font-semibold text-amber-900 mb-1">Invoice No.</label>
-              <input type="text" id="invoice-no-input" placeholder="e.g. SJ-2/26-27" class="w-full rounded-lg p-2 caphi-input font-bold font-mono bg-white" />
+              <input type="text" id="invoice-no-input" placeholder="e.g. INV-01/26-27" class="w-full rounded-lg p-2 caphi-input font-bold font-mono bg-white" />
             </div>
           </div>
 
@@ -699,29 +696,29 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <div>
               <label class="block font-semibold text-amber-900 mb-1">Party Name</label>
-              <input type="text" id="party-name" placeholder="e.g. NAKODA PRINT & PACK" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
+              <input type="text" id="party-name" placeholder="Customer or Supplier Name" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
             </div>
             <div>
               <label class="block font-semibold text-amber-900 mb-1">Party Phone (Optional)</label>
-              <input type="tel" id="party-phone" placeholder="e.g. +91 9876543210" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
+              <input type="tel" id="party-phone" placeholder="+91 9876543210" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <div>
               <label class="block font-semibold text-amber-900 mb-1">Party GSTIN</label>
-              <input type="text" id="party-gstin" placeholder="e.g. 09AGVPJ9178P1ZZ" class="w-full rounded-lg p-2 caphi-input uppercase font-mono bg-white" />
+              <input type="text" id="party-gstin" placeholder="07AAAAA0000A1Z5" class="w-full rounded-lg p-2 caphi-input uppercase font-mono bg-white" />
             </div>
             <div>
               <label class="block font-semibold text-amber-900 mb-1">Party Address</label>
-              <input type="text" id="party-address" placeholder="C-20, SECTOR-63, NOIDA, U.P." class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
+              <input type="text" id="party-address" placeholder="Address, City, State" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
             </div>
           </div>
         </div>
 
         <div>
-          <label class="block font-semibold text-slate-700 mb-1">Description of Goods / Services</label>
-          <input type="text" id="description" required placeholder="e.g. JOB WORK CHARGES-DIE STRIPPING & PACKING" class="w-full rounded-lg p-2 caphi-input font-semibold" />
+          <label class="block font-semibold text-slate-700 mb-1">Description / Particulars</label>
+          <input type="text" id="description" required placeholder="e.g. Retail supply of goods" class="w-full rounded-lg p-2 caphi-input font-semibold" />
         </div>
 
         <div class="grid grid-cols-3 gap-2.5">
@@ -735,7 +732,7 @@
           </div>
           <div>
             <label class="block font-semibold text-slate-700 mb-1">Price / Rate (₹)</label>
-            <input type="number" step="any" id="rate" required placeholder="0.10" oninput="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-bold" />
+            <input type="number" step="any" id="rate" required placeholder="0.00" oninput="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-bold" />
           </div>
         </div>
 
@@ -769,9 +766,9 @@
           <div>
             <label class="block font-semibold text-slate-700 mb-1">Payment Mode</label>
             <select id="method" class="w-full rounded-lg p-2 caphi-input font-semibold">
-              <option value="Bank Transfer">Bank Transfer</option>
-              <option value="Cash">Cash</option>
               <option value="UPI">UPI</option>
+              <option value="Cash">Cash</option>
+              <option value="Bank Transfer">Bank Transfer</option>
               <option value="Credit / Udhar">Credit / Udhar</option>
             </select>
           </div>
@@ -794,7 +791,7 @@
 
       <div class="text-center">
         <h3 class="text-lg font-black text-slate-900 heading-font">Upgrade to Khata Pro</h3>
-        <p class="text-xs text-slate-500 mt-0.5">Unlock Multi-Store Sync, GST Invoicing & Due Calculators</p>
+        <p class="text-xs text-slate-500 mt-0.5">Multi-Store Sync, GST Invoicing & Due Calculators</p>
         <div class="mt-2 flex justify-center items-baseline gap-1">
           <span class="text-3xl font-black text-amber-600 heading-font">₹99</span>
           <span class="text-xs text-slate-500 font-medium">/ 30 Days</span>
@@ -813,29 +810,25 @@
       </div>
 
       <div class="space-y-1 pt-1">
-        <label class="block text-[11px] font-semibold text-slate-600">Enter UPI Ref / UTR No. after payment:</label>
+        <label class="block text-[11px] font-semibold text-slate-600">Enter UPI Ref / UTR No. for activation request:</label>
         <div class="flex gap-2">
           <input type="text" id="upi-utr-input" placeholder="e.g. 4201XXXXXXXX" class="flex-1 rounded-lg p-2 caphi-input text-xs font-mono" />
-          <button onclick="verifyUpiPayment()" class="bg-[#78350f] hover:bg-[#92400e] text-white text-xs font-bold px-3 py-2 rounded-lg transition shadow">Verify</button>
+          <button onclick="submitUpiVerification()" class="bg-[#78350f] hover:bg-[#92400e] text-white text-xs font-bold px-3 py-2 rounded-lg transition shadow">Submit</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ================= PIXEL-PERFECT COMMERCIAL INVOICE TEMPLATE (OFFSCREEN) ================= -->
-  <!-- Constrained strictly to 700px width and 100% cell width to prevent right-border spillage -->
+  <!-- ================= COMMERCIAL INVOICE TEMPLATE (OFFSCREEN - NO DEMO PLACEHOLDERS) ================= -->
   <div id="invoice-pdf-template" style="display: none; width: 700px; max-width: 700px; box-sizing: border-box; background: #ffffff; color: #000; font-family: Arial, sans-serif; font-size: 11px; padding: 12px; margin: 0 auto;">
     <div style="border: 2px solid #000000; box-sizing: border-box; width: 100%;">
-      
       <!-- 1. TOP DOCUMENT HEADER -->
       <div style="position: relative; text-align: center; padding: 10px 8px; border-bottom: 2px solid #000000;">
         <span style="position: absolute; right: 10px; top: 10px; font-size: 10px; font-style: italic; color: #333;">Original Copy</span>
-        <div id="pdf-doc-title" style="font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">SERVICE INVOICE</div>
-        <div id="pdf-top-company-name" style="font-size: 19px; font-weight: 900; margin-top: 2px; text-transform: uppercase;">SANTOSH JAIN</div>
-        <div id="pdf-top-company-address" style="font-size: 10.5px; color: #111; margin-top: 1px;">U-68A, Shankarpur, Delhi-110092</div>
-        <div id="pdf-top-meta-line" style="font-size: 10.5px; font-weight: 800; margin-top: 2px;">
-          <!-- Dynamically inserted -->
-        </div>
+        <div id="pdf-doc-title" style="font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">TAX INVOICE</div>
+        <div id="pdf-top-company-name" style="font-size: 19px; font-weight: 900; margin-top: 2px; text-transform: uppercase;">-</div>
+        <div id="pdf-top-company-address" style="font-size: 10.5px; color: #111; margin-top: 1px;">-</div>
+        <div id="pdf-top-meta-line" style="font-size: 10.5px; font-weight: 800; margin-top: 2px;"></div>
       </div>
 
       <!-- 2. PARTY DETAILS & INVOICE DETAILS STRIP -->
@@ -843,42 +836,33 @@
         <!-- Left: Party Details -->
         <div style="width: 55%; padding: 8px 10px; border-right: 2px solid #000000; box-sizing: border-box; line-height: 1.45;">
           <div style="font-weight: 800; font-style: italic; font-size: 11.5px;">Party Details :</div>
-          <div id="pdf-party-name" style="font-weight: 900; font-size: 12px; margin-top: 2px; text-transform: uppercase;">NAKODA PRINT & PACK</div>
-          <div id="pdf-party-address" style="color: #111; font-size: 10.5px; white-space: pre-line;">C-20, SECTOR-63, NOIDA
-UTTAR PRADESH-201301</div>
-          <div id="pdf-party-gstin" style="font-weight: 800; font-size: 10.5px; margin-top: 2px;">GSTN-09AGVPJ9178P1ZZ</div>
+          <div id="pdf-party-name" style="font-weight: 900; font-size: 12px; margin-top: 2px; text-transform: uppercase;">-</div>
+          <div id="pdf-party-address" style="color: #111; font-size: 10.5px; white-space: pre-line;">-</div>
+          <div id="pdf-party-gstin" style="font-weight: 800; font-size: 10.5px; margin-top: 2px; display: none;"></div>
         </div>
 
         <!-- Right: Invoice Metadata -->
         <div style="width: 45%; padding: 8px 10px; box-sizing: border-box; line-height: 1.55; font-size: 11px;">
           <div style="display: flex; justify-content: space-between;">
             <span style="font-weight: 700;">Invoice No.</span>
-            <span style="font-weight: 800;">: <span id="pdf-inv-no">SJ-2/26-27</span></span>
+            <span style="font-weight: 800;">: <span id="pdf-inv-no">-</span></span>
           </div>
           <div style="display: flex; justify-content: space-between;">
             <span style="font-weight: 700;">Dated</span>
-            <span style="font-weight: 800;">: <span id="pdf-inv-date">10-10-2026</span></span>
+            <span style="font-weight: 800;">: <span id="pdf-inv-date">-</span></span>
           </div>
           <div style="display: flex; justify-content: space-between;">
             <span>GR/RR No.</span>
             <span>: </span>
           </div>
           <div style="display: flex; justify-content: space-between;">
-            <span>Transport</span>
-            <span>: </span>
-          </div>
-          <div style="display: flex; justify-content: space-between;">
             <span>Vehicle No.</span>
-            <span>: </span>
-          </div>
-          <div style="display: flex; justify-content: space-between;">
-            <span>Station</span>
             <span>: </span>
           </div>
         </div>
       </div>
 
-      <!-- 3. TABLE: PERCENTAGES SUM EXACTLY TO 100% -->
+      <!-- 3. TABLE -->
       <table style="width: 100%; border-collapse: collapse; table-layout: fixed; box-sizing: border-box;">
         <thead>
           <tr style="border-bottom: 2px solid #000000; background: #ffffff; font-size: 11px; line-height: 20px;">
@@ -891,13 +875,13 @@ UTTAR PRADESH-201301</div>
           </tr>
         </thead>
         <tbody>
-          <tr style="height: 480px; vertical-align: top; font-size: 11px;">
+          <tr style="height: 400px; vertical-align: top; font-size: 11px;">
             <td id="pdf-row-sn" style="border-right: 2px solid #000000; padding: 8px 2px; text-align: center; font-weight: 700;">1.</td>
-            <td id="pdf-item-desc" style="border-right: 2px solid #000000; padding: 8px 8px; font-weight: 700; text-transform: uppercase; word-break: break-word;">JOB WORK CHARGES-DIE STRIPPING & PACKING</td>
-            <td id="pdf-item-qty" style="border-right: 2px solid #000000; padding: 8px 6px; text-align: right; font-weight: 700;">48,17,500.00</td>
-            <td id="pdf-item-unit" style="border-right: 2px solid #000000; padding: 8px 6px; font-weight: 700;">Pcs.</td>
-            <td id="pdf-item-price" style="border-right: 2px solid #000000; padding: 8px 6px; text-align: right; font-weight: 700;">0.10</td>
-            <td id="pdf-item-total" style="padding: 8px 8px; text-align: right; font-weight: 800;">4,81,750.00</td>
+            <td id="pdf-item-desc" style="border-right: 2px solid #000000; padding: 8px 8px; font-weight: 700; text-transform: uppercase; word-break: break-word;">-</td>
+            <td id="pdf-item-qty" style="border-right: 2px solid #000000; padding: 8px 6px; text-align: right; font-weight: 700;">-</td>
+            <td id="pdf-item-unit" style="border-right: 2px solid #000000; padding: 8px 6px; font-weight: 700;">-</td>
+            <td id="pdf-item-price" style="border-right: 2px solid #000000; padding: 8px 6px; text-align: right; font-weight: 700;">-</td>
+            <td id="pdf-item-total" style="padding: 8px 8px; text-align: right; font-weight: 800;">-</td>
           </tr>
         </tbody>
       </table>
@@ -906,37 +890,34 @@ UTTAR PRADESH-201301</div>
       <table style="width: 100%; border-collapse: collapse; table-layout: fixed; border-top: 2px solid #000000; border-bottom: 2px solid #000000; box-sizing: border-box; font-size: 11px; line-height: 24px;">
         <tr style="font-weight: 800;">
           <td style="width: 54%; text-align: right; padding-right: 12px; font-weight: 900;">Grand Total</td>
-          <td id="pdf-total-qty" style="width: 16%; text-align: right; padding-right: 6px; border-left: 2px solid #000000;">48,17,500.00</td>
-          <td id="pdf-total-unit" style="width: 8%; padding-left: 6px; border-right: 2px solid #000000;">Pcs.</td>
+          <td id="pdf-total-qty" style="width: 16%; text-align: right; padding-right: 6px; border-left: 2px solid #000000;">-</td>
+          <td id="pdf-total-unit" style="width: 8%; padding-left: 6px; border-right: 2px solid #000000;">-</td>
           <td style="width: 10%; text-align: center; border-right: 2px solid #000000; font-weight: 900;">₹</td>
-          <td id="pdf-grand-total" style="width: 12%; text-align: right; padding-right: 8px; font-weight: 900;">4,81,750.00</td>
+          <td id="pdf-grand-total" style="width: 12%; text-align: right; padding-right: 8px; font-weight: 900;">-</td>
         </tr>
       </table>
 
       <!-- 5. RUPEES IN WORDS STRIP -->
       <div style="padding: 6px 10px; border-bottom: 2px solid #000000; font-size: 11px; box-sizing: border-box;">
-        <strong id="pdf-rupees-words">Rupees Four Lakh Eighty One Thousand Seven Hundred and Fifty Only</strong>
+        <strong id="pdf-rupees-words">Rupees Zero Only</strong>
       </div>
 
-      <!-- 6. FOOTER: TERMS & SIGNATURE (RECEIVER'S SIGNATURE OMITTED) -->
-      <div style="display: flex; min-height: 120px; box-sizing: border-box;">
-        <!-- Left: Terms -->
+      <!-- 6. FOOTER: TERMS & SIGNATURE -->
+      <div style="display: flex; min-height: 110px; box-sizing: border-box;">
         <div style="width: 55%; padding: 8px 10px; border-right: 2px solid #000000; font-size: 9.5px; line-height: 1.5; box-sizing: border-box;">
           <div style="font-weight: 800; text-decoration: underline;">Terms & Conditions</div>
           <div>E.& O.E.</div>
           <div>1. Goods once sold will not be taken back.</div>
-          <div>2. Interest @ 18% p.a. will be charged if the payment is not made with in the stipulated time.</div>
-          <div>3. Subject to 'Delhi' Jurisdiction only.</div>
+          <div>2. Interest @ 18% p.a. will be charged if payment is delayed.</div>
+          <div>3. Subject to local jurisdiction.</div>
         </div>
 
-        <!-- Right: Authorized Signatory -->
         <div style="width: 45%; padding: 8px 10px; text-align: right; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; box-sizing: border-box;">
-          <div style="font-weight: 800; font-size: 11.5px;">for <span id="pdf-sign-firm-name">Santosh Jain</span></div>
+          <div style="font-weight: 800; font-size: 11.5px;">for <span id="pdf-sign-firm-name">-</span></div>
           <img id="pdf-sig-preview" src="" style="display: none; max-height: 45px; max-width: 130px; object-fit: contain; margin: 2px 0;" alt="Signature" />
           <div style="font-weight: 800; font-size: 11px;">Authorised Signatory</div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -953,17 +934,17 @@ UTTAR PRADESH-201301</div>
     const PRO_PRICE = 99;
 
     window.companies = JSON.parse(localStorage.getItem('ledger_companies')) || [
-      { id: 'c_default', name: 'SANTOSH JAIN', address: 'U-68A, Shankarpur, Delhi-110092', gstin: '', pan: 'AAEPJ0862H', phone: '' }
+      { id: 'c_default', name: 'Primary Store', address: 'Delhi, India', gstin: '', pan: '', phone: '' }
     ];
     window.activeCompanyId = localStorage.getItem('ledger_active_company_id') || window.companies[0].id;
     window.transactions = JSON.parse(localStorage.getItem(`ledger_tx_${window.activeCompanyId}`)) || [];
-    window.currentUser = JSON.parse(localStorage.getItem('ledger_user')) || { name: 'Aditya', email: 'aditya@example.com', currency: '₹' };
+    window.currentUser = JSON.parse(localStorage.getItem('ledger_user')) || { name: 'Guest', email: '', currency: '₹' };
 
     let isProUser = JSON.parse(localStorage.getItem('ledger_is_pro')) || false;
     let proExpiry = JSON.parse(localStorage.getItem('ledger_pro_expiry')) || null;
     let lineChart, doughnutChart;
 
-    /* PRO SUBSCRIPTION CONTROLLER */
+    /* PRO CONTROLLER */
     function checkProSubscriptionExpiry() {
       if (isProUser && proExpiry) {
         if (Date.now() > proExpiry) {
@@ -1020,9 +1001,10 @@ UTTAR PRADESH-201301</div>
       document.getElementById('upgrade-modal').classList.add('hidden');
     }
 
-    function verifyUpiPayment() {
+    function submitUpiVerification() {
       const utr = document.getElementById('upi-utr-input').value.trim();
       if (utr.length >= 8) {
+        // Activate 30-day Pro license locally
         const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
         isProUser = true;
         proExpiry = Date.now() + thirtyDaysMs;
@@ -1032,9 +1014,10 @@ UTTAR PRADESH-201301</div>
 
         updateProStatusUI();
         closeUpgradeModal();
-        alert(`🎉 Khata Pro Activated successfully with UTR: ${utr}!\nValid for 30 days.`);
+        alert(`Request recorded with Ref: ${utr}. Khata Pro features are enabled for 30 days.`);
+        if (window.syncLedgerToCloud) window.syncLedgerToCloud();
       } else {
-        alert("Please enter a valid UPI Reference / UTR Number (at least 8 digits)!");
+        alert("Please enter a valid 12-digit UPI Reference / UTR Number.");
       }
     }
 
@@ -1045,7 +1028,7 @@ UTTAR PRADESH-201301</div>
     function updateGullakUI() {
       const balEl = document.getElementById('gullak-balance-display');
       if (balEl) balEl.innerText = `₹${gullakBalance.toFixed(2)}`;
-      
+
       const container = document.getElementById('gullak-history-list');
       if (!container) return;
 
@@ -1062,7 +1045,7 @@ UTTAR PRADESH-201301</div>
           </div>
           <div class="flex items-center gap-2">
             <span class="font-black ${item.type === 'deposit' ? 'text-emerald-600' : 'text-rose-600'}">
-              ${item.type === 'deposit' ? '+' : '-'}₹${item.amount.toFixed(2)}
+              ${item.type === 'deposit' ? '+' : '-'}₹${Number(item.amount).toFixed(2)}
             </span>
             <button onclick="deleteGullakRecord(${index})" class="text-slate-400 hover:text-rose-600 p-1" title="Delete Entry">
               <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
@@ -1078,18 +1061,19 @@ UTTAR PRADESH-201301</div>
       const noteInput = document.getElementById('gullak-note-input');
       const amt = parseFloat(amtInput.value);
       const note = noteInput.value.trim() || 'Saved in Gullak';
-      
-      if (!amt || amt <= 0) return alert("Please enter a valid amount (e.g., ₹40 or ₹50)!");
+
+      if (!amt || amt <= 0) return alert("Please enter a valid amount!");
 
       gullakBalance += amt;
       gullakHistory.unshift({ type: 'deposit', amount: amt, note: note, date: new Date().toLocaleDateString('en-GB') });
 
       localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, gullakBalance);
       localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify(gullakHistory));
-      
+
       amtInput.value = '';
       noteInput.value = '';
       updateGullakUI();
+      if (window.syncLedgerToCloud) window.syncLedgerToCloud();
     }
 
     function withdrawGullak() {
@@ -1097,7 +1081,7 @@ UTTAR PRADESH-201301</div>
       const noteInput = document.getElementById('gullak-note-input');
       const amt = parseFloat(amtInput.value);
       const note = noteInput.value.trim() || 'Withdrawn from Gullak';
-      
+
       if (!amt || amt <= 0) return alert("Please enter a valid amount!");
       if (amt > gullakBalance) return alert("Insufficient balance in Gullak!");
 
@@ -1106,16 +1090,17 @@ UTTAR PRADESH-201301</div>
 
       localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, gullakBalance);
       localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify(gullakHistory));
-      
+
       amtInput.value = '';
       noteInput.value = '';
       updateGullakUI();
+      if (window.syncLedgerToCloud) window.syncLedgerToCloud();
     }
 
     function deleteGullakRecord(index) {
       if (!confirm("Are you sure you want to delete this Gullak entry?")) return;
       const record = gullakHistory[index];
-      
+
       if (record.type === 'deposit') {
         gullakBalance = Math.max(0, gullakBalance - record.amount);
       } else if (record.type === 'withdraw') {
@@ -1126,15 +1111,17 @@ UTTAR PRADESH-201301</div>
       localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, gullakBalance);
       localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify(gullakHistory));
       updateGullakUI();
+      if (window.syncLedgerToCloud) window.syncLedgerToCloud();
     }
 
     function clearAllGullakRecords() {
-      if (!confirm("Are you sure you want to clear all Gullak records and balance?")) return;
+      if (!confirm("Clear all Gullak records and balance for this branch?")) return;
       gullakBalance = 0;
       gullakHistory = [];
       localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, 0);
       localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify([]));
       updateGullakUI();
+      if (window.syncLedgerToCloud) window.syncLedgerToCloud();
     }
 
     /* STORE SWITCHER MODAL & CONTROLLERS */
@@ -1165,7 +1152,7 @@ UTTAR PRADESH-201301</div>
                   ${c.name}
                   ${isActive ? '<span class="text-[9px] bg-amber-600 text-white font-black px-1.5 py-0.5 rounded-full uppercase">Active</span>' : ''}
                 </p>
-                <p class="text-[10px] text-slate-500">${c.address || 'Delhi, India'}</p>
+                <p class="text-[10px] text-slate-500">${c.address || 'Local Branch'}</p>
               </div>
             </div>
             <i data-lucide="${isActive ? 'check-circle-2' : 'chevron-right'}" class="w-4 h-4 ${isActive ? 'text-amber-700' : 'text-slate-400'}"></i>
@@ -1177,7 +1164,7 @@ UTTAR PRADESH-201301</div>
 
     function renderCompanySelectors() {
       const activeComp = getActiveCompany();
-      
+
       const headerStoreName = document.getElementById('header-active-store-name');
       const mobileStoreName = document.getElementById('mobile-active-store-name');
       const currentCompDisplay = document.getElementById('current-company-display');
@@ -1208,7 +1195,7 @@ UTTAR PRADESH-201301</div>
           <div onclick="selectCompanyById('${c.id}')" class="p-3 rounded-xl border transition cursor-pointer flex justify-between items-center ${isActive ? 'bg-amber-100/60 border-amber-400' : 'bg-white border-amber-200 hover:bg-amber-50'}">
             <div>
               <p class="font-bold text-xs text-slate-900">${c.name} ${isActive ? '<span class="text-[9px] bg-amber-600 text-white px-2 py-0.5 rounded-full ml-1 font-bold">Active</span>' : ''}</p>
-              <p class="text-[10px] text-slate-500">${c.address || 'Delhi, India'}</p>
+              <p class="text-[10px] text-slate-500">${c.address || 'Local Branch'}</p>
             </div>
             <i data-lucide="${isActive ? 'check-circle-2' : 'circle'}" class="w-4 h-4 ${isActive ? 'text-amber-700' : 'text-slate-400'}"></i>
           </div>
@@ -1224,7 +1211,7 @@ UTTAR PRADESH-201301</div>
     }
 
     function getActiveCompany() {
-      return (window.companies || []).find(c => c.id === window.activeCompanyId) || { name: 'SANTOSH JAIN', address: 'U-68A, Shankarpur, Delhi-110092', gstin: '', pan: 'AAEPJ0862H', phone: '' };
+      return (window.companies || []).find(c => c.id === window.activeCompanyId) || { name: 'Primary Store', address: 'Delhi, India', gstin: '', pan: '', phone: '' };
     }
 
     function loadCompanyTransactions() {
@@ -1243,10 +1230,10 @@ UTTAR PRADESH-201301</div>
       const name = document.getElementById('new-company-name-input').value.trim();
       if (!name) return alert("Please enter a valid store name!");
 
-      const newC = { id: `c_${Date.now()}`, name: name, address: 'Delhi, India', gstin: '', pan: '', phone: '' };
+      const newC = { id: `c_${Date.now()}`, name: name, address: '', gstin: '', pan: '', phone: '' };
       window.companies.push(newC);
       localStorage.setItem('ledger_companies', JSON.stringify(window.companies));
-      
+
       window.activeCompanyId = newC.id;
       localStorage.setItem('ledger_active_company_id', window.activeCompanyId);
 
@@ -1285,6 +1272,7 @@ UTTAR PRADESH-201301</div>
       if (btn) btn.classList.add('nav-active');
 
       if (tab === 'gullak') updateGullakUI();
+      if (tab === 'dashboard') updateCharts();
     }
 
     function saveAndRender() {
@@ -1367,6 +1355,15 @@ UTTAR PRADESH-201301</div>
       lucide.createIcons();
     }
 
+    function filterTransactions() {
+      const term = document.getElementById('search-input').value.toLowerCase();
+      const rows = document.querySelectorAll('#full-transaction-rows tr');
+      rows.forEach(r => {
+        const text = r.innerText.toLowerCase();
+        r.style.display = text.includes(term) ? '' : 'none';
+      });
+    }
+
     function deleteTx(id) {
       if (confirm("Delete this entry from register?")) {
         window.transactions = (window.transactions || []).filter(t => t.id !== id);
@@ -1398,7 +1395,7 @@ UTTAR PRADESH-201301</div>
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
         doc.addImage(e.target.result, 'JPEG', 10, 10, 190, 0);
-        doc.save(`Receipt_Export_${Date.now()}.pdf`);
+        doc.save(`Document_${Date.now()}.pdf`);
       };
       reader.readAsDataURL(input.files[0]);
     }
@@ -1460,17 +1457,20 @@ UTTAR PRADESH-201301</div>
           for (let i = 1; i <= pdf.numPages; i++) {
             const page = await pdf.getPage(i);
             const txt = await page.getTextContent();
-            let r = [];
-            txt.items.forEach((item, idx) => {
-              r.push(item.str);
-              if ((idx + 1) % 4 === 0) { rows.push([...r]); r = []; }
+            let lineMap = {};
+            txt.items.forEach((item) => {
+              const y = Math.round(item.transform[5]);
+              if (!lineMap[y]) lineMap[y] = [];
+              lineMap[y].push(item.str.trim());
             });
-            if (r.length) rows.push(r);
+            Object.keys(lineMap).sort((a,b) => b - a).forEach(y => {
+              rows.push(lineMap[y].filter(Boolean));
+            });
           }
           const ws = XLSX.utils.aoa_to_sheet(rows);
           const wb = XLSX.utils.book_new();
-          XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-          XLSX.writeFile(wb, `Extracted_Data_${Date.now()}.xlsx`);
+          XLSX.utils.book_append_sheet(wb, ws, "Extracted");
+          XLSX.writeFile(wb, `Extracted_${Date.now()}.xlsx`);
         } catch (err) {
           alert("Error parsing PDF tables: " + err.message);
         }
@@ -1480,7 +1480,7 @@ UTTAR PRADESH-201301</div>
 
     function recoverDamagedFile() {
       const input = document.getElementById('damaged-file-input');
-      if (!input.files.length) return alert('Select a damaged file to recover!');
+      if (!input.files.length) return alert('Select a file to recover text from!');
       const reader = new FileReader();
       reader.onload = function(e) {
         const text = e.target.result;
@@ -1490,26 +1490,32 @@ UTTAR PRADESH-201301</div>
         a.href = URL.createObjectURL(blob);
         a.download = `Recovered_Text_${Date.now()}.txt`;
         a.click();
-        alert("Raw printable strings successfully extracted.");
       };
       reader.readAsText(input.files[0]);
     }
 
-    /* RUPEES TO WORDS CONVERTER HELPER */
+    /* RUPEES TO WORDS CONVERTER */
     function numberToWordsINR(amount) {
       const a = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eight ', 'Nine ', 'Ten ', 'Eleven ', 'Twelve ', 'Thirteen ', 'Fourteen ', 'Fifteen ', 'Sixteen ', 'Seventeen ', 'Eighteen ', 'Nineteen '];
       const b = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
 
       function inWords(num) {
-        if ((num = num.toString()).length > 9) return 'Overflow';
-        const n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
-        if (!n) return '';
+        if (num === 0) return 'Zero';
         let str = '';
-        str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore ' : '';
-        str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh ' : '';
-        str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand ' : '';
-        str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred ' : '';
-        str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) : '';
+        let crore = Math.floor(num / 10000000);
+        num %= 10000000;
+        let lakh = Math.floor(num / 100000);
+        num %= 100000;
+        let thousand = Math.floor(num / 1000);
+        num %= 1000;
+        let hundred = Math.floor(num / 100);
+        let rem = num % 100;
+
+        if (crore > 0) str += (crore < 20 ? a[crore] : b[Math.floor(crore / 10)] + ' ' + a[crore % 10]) + 'Crore ';
+        if (lakh > 0) str += (lakh < 20 ? a[lakh] : b[Math.floor(lakh / 10)] + ' ' + a[lakh % 10]) + 'Lakh ';
+        if (thousand > 0) str += (thousand < 20 ? a[thousand] : b[Math.floor(thousand / 10)] + ' ' + a[thousand % 10]) + 'Thousand ';
+        if (hundred > 0) str += a[hundred] + 'Hundred ';
+        if (rem > 0) str += (rem < 20 ? a[rem] : b[Math.floor(rem / 10)] + ' ' + a[rem % 10]);
         return str.trim();
       }
 
@@ -1520,68 +1526,54 @@ UTTAR PRADESH-201301</div>
       return res + ' Only';
     }
 
-    /* COMMERCIAL INVOICE GENERATOR FUNCTION */
+    /* INVOICE GENERATOR FUNCTION */
     function generateInvoicePDF(id) {
       const item = (window.transactions || []).find(t => t.id === id);
       if (!item) return alert("Record not found!");
       const activeComp = getActiveCompany();
 
-      // Top Title (SERVICE INVOICE vs TAX INVOICE)
-      document.getElementById('pdf-doc-title').innerText = item.invoiceDocType || (item.category === 'Job Work' ? 'SERVICE INVOICE' : 'TAX INVOICE');
-      document.getElementById('pdf-top-company-name').innerText = activeComp.name || 'SANTOSH JAIN';
-      document.getElementById('pdf-top-company-address').innerText = activeComp.address || 'U-68A, Shankarpur, Delhi-110092';
+      document.getElementById('pdf-doc-title').innerText = item.invoiceDocType || (item.type === 'sale' ? 'TAX INVOICE' : 'SERVICE INVOICE');
+      document.getElementById('pdf-top-company-name').innerText = activeComp.name || 'Store';
+      document.getElementById('pdf-top-company-address').innerText = activeComp.address || 'Address Not Provided';
 
-      // Header Metadata: Shows only PAN if only PAN exists; hides unused tags
       const metaParts = [];
-      if (activeComp.pan && activeComp.pan !== 'N/A' && activeComp.pan.trim() !== '') {
-        metaParts.push(`PAN-${activeComp.pan}`);
-      }
-      if (activeComp.gstin && activeComp.gstin !== 'N/A' && activeComp.gstin.trim() !== '') {
-        metaParts.push(`GSTIN: ${activeComp.gstin}`);
-      }
-      if (activeComp.phone && activeComp.phone !== 'N/A' && activeComp.phone.trim() !== '') {
-        metaParts.push(`Phone: ${activeComp.phone}`);
-      }
+      if (activeComp.pan && activeComp.pan.trim() !== '') metaParts.push(`PAN-${activeComp.pan}`);
+      if (activeComp.gstin && activeComp.gstin.trim() !== '') metaParts.push(`GSTIN: ${activeComp.gstin}`);
+      if (activeComp.phone && activeComp.phone.trim() !== '') metaParts.push(`Phone: ${activeComp.phone}`);
       document.getElementById('pdf-top-meta-line').innerText = metaParts.join('  |  ');
 
-      // Party Details
-      document.getElementById('pdf-party-name').innerText = (item.partyName && item.partyName !== '-') ? item.partyName : 'NAKODA PRINT & PACK';
-      document.getElementById('pdf-party-address').innerText = (item.partyAddress && item.partyAddress !== '-') ? item.partyAddress : 'C-20, SECTOR-63, NOIDA\nUTTAR PRADESH-201301';
-      
+      document.getElementById('pdf-party-name').innerText = item.partyName && item.partyName !== '-' ? item.partyName : 'Cash / Counter Sale';
+      document.getElementById('pdf-party-address').innerText = item.partyAddress && item.partyAddress !== '-' ? item.partyAddress : '';
+
       const partyGstEl = document.getElementById('pdf-party-gstin');
-      if (item.partyGstin && item.partyGstin !== 'N/A' && item.partyGstin.trim() !== '') {
-        partyGstEl.innerText = `GSTN-${item.partyGstin}`;
+      if (item.partyGstin && item.partyGstin.trim() !== '') {
+        partyGstEl.innerText = `GSTIN: ${item.partyGstin}`;
         partyGstEl.style.display = 'block';
       } else {
         partyGstEl.style.display = 'none';
       }
 
-      // Invoice Details Right Box
-      document.getElementById('pdf-inv-no').innerText = item.invoiceNo || `SJ-${item.id.toString().slice(-4)}/26-27`;
-      document.getElementById('pdf-inv-date').innerText = item.date ? item.date.split('-').reverse().join('-') : '10-10-2026';
+      document.getElementById('pdf-inv-no').innerText = item.invoiceNo || `KB-${item.id.toString().slice(-4)}`;
+      document.getElementById('pdf-inv-date').innerText = item.date ? item.date.split('-').reverse().join('-') : '-';
 
-      // Table Line Item
       const qtyVal = Number(item.quantity) || 1;
       const rateVal = Number(item.rate) || Number(item.amount) || 0;
       const totalVal = Number(item.totalAmount) || Number(item.amount) || 0;
       const unitVal = item.unit || 'Pcs.';
 
-      document.getElementById('pdf-item-desc').innerText = item.description || 'JOB WORK CHARGES-DIE STRIPPING & PACKING';
-      document.getElementById('pdf-item-qty').innerText = qtyVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('pdf-item-desc').innerText = item.description || 'General Goods';
+      document.getElementById('pdf-item-qty').innerText = qtyVal.toLocaleString('en-IN', { minimumFractionDigits: 2 });
       document.getElementById('pdf-item-unit').innerText = unitVal;
       document.getElementById('pdf-item-price').innerText = rateVal.toFixed(2);
-      document.getElementById('pdf-item-total').innerText = totalVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('pdf-item-total').innerText = totalVal.toLocaleString('en-IN', { minimumFractionDigits: 2 });
 
-      // Grand Total Line
-      document.getElementById('pdf-total-qty').innerText = qtyVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('pdf-total-qty').innerText = qtyVal.toLocaleString('en-IN', { minimumFractionDigits: 2 });
       document.getElementById('pdf-total-unit').innerText = unitVal;
-      document.getElementById('pdf-grand-total').innerText = totalVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('pdf-grand-total').innerText = totalVal.toLocaleString('en-IN', { minimumFractionDigits: 2 });
 
-      // Rupees in Words
       document.getElementById('pdf-rupees-words').innerText = numberToWordsINR(totalVal);
-      document.getElementById('pdf-sign-firm-name').innerText = activeComp.name || 'Santosh Jain';
+      document.getElementById('pdf-sign-firm-name').innerText = activeComp.name || 'Store';
 
-      // Digital Signature
       const sigImg = document.getElementById('pdf-sig-preview');
       if (companySignatureDataUrl) {
         sigImg.src = companySignatureDataUrl;
@@ -1590,7 +1582,6 @@ UTTAR PRADESH-201301</div>
         sigImg.style.display = 'none';
       }
 
-      // Execute PDF Generator with bounded canvas
       const el = document.getElementById('invoice-pdf-template');
       el.style.display = 'block';
       html2pdf().from(el).set({
@@ -1604,12 +1595,12 @@ UTTAR PRADESH-201301</div>
       });
     }
 
-    /* EXPANDED CALCULATORS */
+    /* CALCULATORS */
     function calculateInterest() {
       const P = parseFloat(document.getElementById('calc-principal').value) || 0;
       const R = parseFloat(document.getElementById('calc-rate').value) || 0;
       const M = parseFloat(document.getElementById('calc-months').value) || 0;
-      if (!P || !R || !M) return alert("Please fill all fields!");
+      if (!P || !R || !M) return alert("Please fill all calculator inputs!");
       const interest = (P * R * M) / 100;
       const total = P + interest;
       const res = document.getElementById('interest-result');
@@ -1632,37 +1623,54 @@ UTTAR PRADESH-201301</div>
     function initCharts() {
       lineChart = new Chart(document.getElementById('overviewChart').getContext('2d'), {
         type: 'line',
-        data: { labels: [], datasets: [{ label: 'Cash Flow', data: [], borderColor: '#d97706', backgroundColor: 'rgba(245, 158, 11, 0.1)', fill: true, tension: 0.35, borderWidth: 2.5 }] },
+        data: { labels: [], datasets: [{ label: 'Running Balance', data: [], borderColor: '#d97706', backgroundColor: 'rgba(245, 158, 11, 0.12)', fill: true, tension: 0.35, borderWidth: 2.5 }] },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#fef08a' } }, x: { grid: { display: false } } } }
       });
       doughnutChart = new Chart(document.getElementById('categoryChart').getContext('2d'), {
         type: 'doughnut',
-        data: { labels: [], datasets: [{ data: [], backgroundColor: ['#d97706', '#10b981', '#f59e0b', '#ec4899'] }] },
-        options: { responsive: true, maintainAspectRatio: false, cutout: '75%', plugins: { legend: { display: false } } }
+        data: { labels: [], datasets: [{ data: [], backgroundColor: ['#d97706', '#10b981', '#f59e0b', '#ec4899', '#6366f1'] }] },
+        options: { responsive: true, maintainAspectRatio: false, cutout: '72%', plugins: { legend: { display: false } } }
       });
     }
 
     function updateCharts() {
+      if (!doughnutChart || !lineChart) return;
+
+      // Update Doughnut Chart (Categories)
       const map = {};
-      (window.transactions || []).forEach(t => map[t.category] = (map[t.category] || 0) + (t.totalAmount || t.amount));
+      (window.transactions || []).forEach(t => {
+        const cat = t.category || 'General';
+        map[cat] = (map[cat] || 0) + (t.totalAmount || t.amount);
+      });
       doughnutChart.data.labels = Object.keys(map);
       doughnutChart.data.datasets[0].data = Object.values(map);
       doughnutChart.update();
+
+      // Update Overview Line Chart (Balance Over Time)
+      const sorted = [...(window.transactions || [])].sort((a, b) => new Date(a.date) - new Date(b.date));
+      lineChart.data.labels = sorted.map(t => t.date);
+      let running = 0;
+      lineChart.data.datasets[0].data = sorted.map(t => {
+        const isPos = t.type === 'sale' || t.type === 'receipt';
+        running += isPos ? (t.totalAmount || t.amount) : -(t.totalAmount || t.amount);
+        return running;
+      });
+      lineChart.update();
     }
 
-    function openModal() { 
-      document.getElementById('modal').classList.remove('hidden'); 
+    function openModal() {
+      document.getElementById('modal').classList.remove('hidden');
       if (!document.getElementById('invoice-no-input').value) {
-        document.getElementById('invoice-no-input').value = `SJ-${(window.transactions.length + 1)}/26-27`;
+        document.getElementById('invoice-no-input').value = `INV-${window.transactions.length + 1}/26-27`;
       }
-      calculateAmounts(); 
+      calculateAmounts();
     }
     function closeModal() { document.getElementById('modal').classList.add('hidden'); }
 
     function toggleVoucherFields() {
       const type = document.getElementById('type').value;
       if ((type === 'sale' || type === 'purchase') && !isProUser) {
-        alert('Sale & Purchase Vouchers with Custom Invoices require an active Pro Membership (₹99/30 days).');
+        alert('Sale & Purchase Invoicing requires Khata Pro.');
         document.getElementById('type').value = 'receipt';
         openUpgradeModal();
         return;
@@ -1690,7 +1698,7 @@ UTTAR PRADESH-201301</div>
       document.getElementById('summary-total').innerText = `₹${total.toFixed(2)}`;
     }
 
-    /* FORM SUBMISSION AND CLOUD HOOK */
+    /* FORM SUBMISSION */
     document.getElementById('transaction-form').addEventListener('submit', (e) => {
       e.preventDefault();
       const type = document.getElementById('type').value;
@@ -1709,7 +1717,7 @@ UTTAR PRADESH-201301</div>
           id: Date.now(),
           type: type,
           invoiceDocType: document.getElementById('invoice-doc-type').value,
-          invoiceNo: document.getElementById('invoice-no-input').value.trim() || `SJ-${Date.now().toString().slice(-4)}`,
+          invoiceNo: document.getElementById('invoice-no-input').value.trim() || `INV-${Date.now().toString().slice(-4)}`,
           partyName: document.getElementById('party-name').value.trim() || '-',
           partyPhone: document.getElementById('party-phone').value.trim() || '-',
           partyGstin: document.getElementById('party-gstin').value.trim() || '',
@@ -1753,10 +1761,7 @@ UTTAR PRADESH-201301</div>
       }
 
       saveAndRender();
-      
-      if (window.syncLedgerToCloud) {
-        window.syncLedgerToCloud();
-      }
+      if (window.syncLedgerToCloud) window.syncLedgerToCloud();
 
       closeModal();
       e.target.reset();
@@ -1784,7 +1789,7 @@ UTTAR PRADESH-201301</div>
     saveAndRender();
   </script>
 
-  <!-- FIREBASE AUTHENTICATION & CLOUD FIRESTORE SYNC MODULE -->
+  <!-- FIREBASE AUTH & FIRESTORE WITH GULLAK SYNC -->
   <script type="module">
     import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { 
@@ -1862,11 +1867,16 @@ UTTAR PRADESH-201301</div>
     window.syncLedgerToCloud = async function() {
       if (!activeUid || isSyncingFromCloud) return;
       try {
-        const activeCompId = window.activeCompanyId || localStorage.getItem('ledger_active_company_id') || 'c_default';
+        const activeCompId = window.activeCompanyId || 'c_default';
         const allTransactions = {};
-        
+        const allGullak = {};
+
         (window.companies || []).forEach(c => {
           allTransactions[c.id] = JSON.parse(localStorage.getItem(`ledger_tx_${c.id}`)) || [];
+          allGullak[c.id] = {
+            balance: Number(localStorage.getItem(`gullak_bal_${c.id}`)) || 0,
+            history: JSON.parse(localStorage.getItem(`gullak_hist_${c.id}`)) || []
+          };
         });
 
         if (window.transactions) {
@@ -1877,6 +1887,9 @@ UTTAR PRADESH-201301</div>
           companies: window.companies || [],
           activeCompanyId: activeCompId,
           transactionsMap: allTransactions,
+          gullakMap: allGullak,
+          isPro: isProUser,
+          proExpiry: proExpiry,
           updatedAt: new Date().toISOString()
         }, { merge: true });
       } catch (err) {
@@ -1934,6 +1947,12 @@ UTTAR PRADESH-201301</div>
                 if (txs.length > 0 || localTxs.length === 0) {
                   localStorage.setItem(`ledger_tx_${id}`, JSON.stringify(txs));
                 }
+              });
+            }
+            if (data.gullakMap) {
+              Object.entries(data.gullakMap).forEach(([id, g]) => {
+                localStorage.setItem(`gullak_bal_${id}`, g.balance || 0);
+                localStorage.setItem(`gullak_hist_${id}`, JSON.stringify(g.history || []));
               });
             }
 
